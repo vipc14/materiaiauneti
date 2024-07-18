@@ -2,7 +2,7 @@
 
 // Preguntas y respuestas predefinidas sobre tecnología de IA
 const faqData = {
-    "¿Qué es inteligencia artificial?": "La inteligencia artificial se refiere a la capacidad de las máquinas para realizar tareas que normalmente requieren inteligencia humana.",
+    "hola": "La inteligencia artificial se refiere a la capacidad de las máquinas para realizar tareas que normalmente requieren inteligencia humana.",
     "¿Cuáles son los tipos de inteligencia artificial?": "Existen dos tipos principales: IA débil (específica para tareas) y IA fuerte (capaz de razonamiento general).",
     "¿Cuál es la diferencia entre aprendizaje automático y IA?": "El aprendizaje automático es una técnica dentro del campo de la IA que permite a las máquinas aprender a partir de datos sin ser programadas explícitamente.",
     "¿Qué es el aprendizaje profundo (deep learning)?": "El aprendizaje profundo es una técnica de aprendizaje automático que utiliza redes neuronales profundas para aprender representaciones de datos.",
