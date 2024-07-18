@@ -1,3 +1,4 @@
+
 // script.js
 
 // Preguntas y respuestas predefinidas sobre tecnología de IA
@@ -16,7 +17,7 @@ const faqData = {
 };
 
 document.getElementById('sendBtn').addEventListener('click', function() {
-    const userInput = document.getElementById('userInput').value.trim().toLowerCase();
+    const userInput = document.getElementById('userInput').value.trim();
     const responseDiv = document.getElementById('response');
     responseDiv.innerHTML = "";
 
@@ -29,9 +30,9 @@ document.getElementById('sendBtn').addEventListener('click', function() {
     const normalizedInput = normalizeInput(userInput);
 
     // Buscamos la respuesta en los datos predefinidos
-    const answer = faqData[normalizedInput];
+    let answer = findAnswer(normalizedInput);
 
-    if (answer !== undefined) {
+    if (answer !== null) {
         responseDiv.innerHTML = answer;
     } else {
         responseDiv.innerHTML = "Lo siento, no tengo respuesta para esa pregunta.";
@@ -43,7 +44,17 @@ document.getElementById('sendBtn').addEventListener('click', function() {
 
 // Función para normalizar la entrada del usuario
 function normalizeInput(input) {
-    // Convertimos a minúsculas y eliminamos signos de puntuación
+    // Convertimos a minúsculas y eliminamos signos de puntuación y espacios extra
     return input.toLowerCase().replace(/[¿¡?!.]/g, '').trim();
 }
 
+// Función para buscar la respuesta en faqData
+function findAnswer(userInput) {
+    for (let question in faqData) {
+        const normalizedQuestion = normalizeInput(question);
+        if (normalizedQuestion === userInput) {
+            return faqData[question];
+        }
+    }
+    return null; // Retornamos null si no encontramos respuesta
+}
