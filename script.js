@@ -1,4 +1,3 @@
-
 // script.js
 
 // Preguntas y respuestas predefinidas sobre tecnología de IA
@@ -44,8 +43,11 @@ document.getElementById('sendBtn').addEventListener('click', function() {
 
 // Función para normalizar la entrada del usuario
 function normalizeInput(input) {
-    // Convertimos a minúsculas y eliminamos signos de puntuación y espacios extra
-    return input.toLowerCase().replace(/[¿¡?!.]/g, '').trim();
+    // Convertimos a minúsculas y eliminamos signos de puntuación y acentos
+    return input.toLowerCase()
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Elimina acentos
+                .replace(/[¿¡?!.]/g, '') // Elimina signos de puntuación
+                .trim();
 }
 
 // Función para buscar la respuesta en faqData
