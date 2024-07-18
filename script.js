@@ -11,11 +11,11 @@ const faqData = {
     "¿Qué es el procesamiento del lenguaje natural (NLP)?": "El procesamiento del lenguaje natural es una rama de la IA que permite a las máquinas entender, interpretar y generar texto y voz en lenguaje humano.",
     "¿Cuáles son algunos ejemplos de aplicaciones de NLP?": "Chatbots, traducción automática, análisis de sentimientos en redes sociales, resumen automático de texto, entre otros.",
     "¿Qué es la visión por computadora?": "La visión por computadora es el campo de la IA que permite a las máquinas interpretar y comprender el contenido visual del mundo real, como imágenes y videos.",
-    "¿Qué es el reconocimiento de voz?": "El reconocimiento de voz es una tecnología que permite a las máquinas convertir señales de voz en texto.",
+    "¿Qué es el reconocimiento de voz?": "El reconocimiento de voz es una tecnología que permite a las máquinas convertir señales de voz en texto."
     // Continuar con el resto de preguntas y respuestas
 };
 
-document.getElementById('sendBtn').addEventListener('click', () => {
+document.getElementById('sendBtn').addEventListener('click', function() {
     const userInput = document.getElementById('userInput').value.trim().toLowerCase();
     const responseDiv = document.getElementById('response');
     responseDiv.innerHTML = "";
