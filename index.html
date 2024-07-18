@@ -1,18 +1,19 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Chatbot</title>
+    <title>FAQ con ChatGPT</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>FAQ Chatbot</h1>
-        <div class="chat-box">
-            <div id="responses"></div>
-            <input type="text" id="question" placeholder="Escribe tu pregunta...">
-            <button onclick="getResponse()">Enviar</button>
+        <h1>FAQ con ChatGPT</h1>
+        <div class="chatbox">
+            <input type="text" id="userInput" placeholder="Haz tu pregunta...">
+            <button id="sendBtn">Enviar</button>
+            <div id="response"></div>
         </div>
     </div>
     <script src="script.js"></script>
