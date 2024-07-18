@@ -15,7 +15,7 @@ async function getResponse() {
             'Authorization': `Bearer ${apiKey}`
         },
         body: JSON.stringify({
-            model: "text-davinci-003",  // Reemplaza con el modelo apropiado si es necesario
+            model: "gpt-3.5",  // Reemplaza con el modelo apropiado si es necesario
             prompt: question,
             max_tokens: 150
         })
